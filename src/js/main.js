@@ -10,6 +10,9 @@ box.addEventListener("click", function (event) {
   if (event.altKey) {
     if (boxWidth < 130) {
       box.innerHTML = "";
+    } else {
+      box.innerHTML = `<div class="boxWidth">boxWidth: ${boxWidth}</div>
+        <div class="clientWidth">clientWidth: ${document.documentElement.clientWidth}</div>`;
     }
     if (boxWidth > 10) {
       box.style.width = `${(boxWidth = boxWidth - step)}px`;
